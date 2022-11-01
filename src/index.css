@@ -1,0 +1,260 @@
+:root {
+	--light: #F8F8F8;
+	--dark: #313131;
+	--grey: rgb(243, 140, 226);
+	--primary: #ff00dd;
+	--secondary: #f7ebf4;
+	--alert: #5e1558;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: montserrat, sans-serif;
+}
+.pie{
+	width: 350px;
+	height: 200px;
+	margin-left: 950px;
+	margin-top: -120px;
+	
+  
+  }
+
+input, button {
+	border: none;
+	outline: none;
+	background: none;
+}
+
+body { width: 100%;
+	height: 100%;
+	background-image: linear-gradient(to right, var(--primary), var(--secondary));
+}
+
+.App {
+	padding: 30px;
+}
+
+header {
+	display: flex;
+	justify-content: space-between;
+	padding: 15px;
+	
+}
+
+h1 {
+	color: var(--dark);
+	font-size: 32px;
+	font-weight: 600;
+	text-align: left;
+	font-family: 'Times New Roman', Times, serif;
+}
+
+.total {
+	color: black;
+	font-size: 28px;
+	font-weight: 900;
+	background-color: #f7f1f1;
+	padding: 5px 25px;
+	border-radius: 3px;
+	width: 130px;
+}
+
+.income-form {
+	display: flex;
+	justify-content: left;
+	margin-top: 15px;
+	position: relative;
+	width:500px ;
+	
+}
+
+.income-form:after {
+	content: "";
+	
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+	z-index: 0;
+	background-image: linear-gradient(to right, var(--primary), var(--secondary));
+	border-radius: 10px;
+	transition: 0.2s;
+}
+
+.income-form:focus-within:after {
+	top: -3px;
+	left: -3px;
+	right: -3px;
+	bottom: -3px;
+}
+.form-inner {
+	position: relative;
+	z-index: 1;
+	display: flex;
+	justify-content:space-evenly;
+	transition: 0.4s;
+	border-radius: 8px;
+}
+.form-inner input {
+	font-size: 18px;
+	padding: 10px 15px;
+	background-color: #FFF;
+	width: 170px;
+}
+
+.form-inner input[type="text"] {
+	border-radius: 8px 0px 0px 8px;
+	flex: 1 1 100%;
+}
+.form-inner input[type="date"] {
+	border-radius: 0px;
+	min-width: 150px;
+}
+.form-inner input[type="submit"] {
+	border-radius: 0px 8px 8px 0px;
+	cursor: pointer;
+	
+	background-image: linear-gradient(to right, var(--primary) 50%, var(--primary) 50%, var(--secondary));
+	background-size: 200%;
+	background-position: 0%;
+
+	color: var(--dark);
+	font-weight: 600;
+	text-transform: uppercase;
+
+	transition: 0.4s;
+}
+
+.form-inner input[type="submit"]:hover {
+	background-position: 100%;
+	color: #FFF;
+}
+
+.income-list {
+	padding: 15px;
+	width: 710px;
+	margin-left: 30px;
+}
+
+.income-list .income-item {
+	position: relative;
+	padding: 10px 15px;
+	background-color: #FFF;
+	border-radius: 8px;
+	margin-bottom: 15px;
+	display: flex;
+	transition: 0.4s;
+	padding-left: 75px;
+}
+
+.income-list .income-item .remove-item {
+	position: absolute;
+	width: 0;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	overflow: hidden;
+
+	cursor: pointer;
+	display: block;
+	color: var(--light);
+	font-weight: 600;
+	background-color: var(--alert);
+	border-radius: 8px 0px 0px 8px;
+	transition: 0.2s;
+}
+
+
+
+
+.expence-list {
+	padding: 15px;
+}
+
+.expense-list .expense-item {
+	position: relative;
+	padding: 10px 15px;
+	background-color: #FFF;
+	border-radius: 8px;
+	margin-bottom: 15px;
+	display: flex;
+	transition: 0.4s;
+	padding-left: 75px;
+	width: 690px;
+	margin-top: 15px;
+	margin-left: 40px;
+}
+
+.expense-list .expense-item .remove-item {
+	position: absolute;
+	width: 0;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	overflow: hidden;
+
+	cursor: pointer;
+	display: block;
+	color: var(--light);
+	font-weight: 600;
+	background-color: var(--alert);
+	border-radius: 8px 0px 0px 8px;
+	transition: 0.2s;
+}
+
+.income-list .income-item:hover .remove-item {
+	width: 50px;
+}
+
+.income-list .income-item .desc {
+	flex: 1 1 100%;
+}
+
+.income-list .income-item .price,
+.income-list .income-item .date {
+	min-width: 125px;
+}
+.income-list .income-item:hover {
+	box-shadow: 0px 0px 6px rgba(0,0,0,0.1);
+}
+
+
+
+
+
+.expense-list .expense-item:hover .remove-item {
+	width: 50px;
+}
+
+.expense-list .expense-item .desc {
+	flex: 1 1 100%;
+}
+
+.expense-list .expense-item .price,
+.expense-list .expense-item .date {
+	min-width: 125px;
+}
+.expense-list .expense-item:hover {
+	box-shadow: 0px 0px 6px rgba(0,0,0,0.1);
+}
+#icom{
+	color: black;
+	font-size: 28px;
+	font-weight: 900;
+	background-color: #f7f1f1;
+	padding: 5px 25px;
+	border-radius: 3px;
+	width: 130px;
+}
+#icom1{
+	color: black;
+	font-size: 28px;
+	font-weight: 900;
+	background-color: #f7f1f1;
+	padding: 5px 25px;
+	border-radius: 3px;
+	width: 130px;
+}
